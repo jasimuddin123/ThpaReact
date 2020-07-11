@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 
 const name = "Jasim Uddin";
@@ -10,17 +11,23 @@ const img4 = "https://picsum.photos/350/300";
 const links = 'https://www.facebook.com/';
 
 ReactDOM.render(
-<>
-  <h2 contentEditable="true">{`My Name is ${name}`}</h2>
-  <img src={img1} alt="Photo"/>
-  <img src={img2} alt="Photo"/>
-  <img src={img3} alt="Photo"/>
-  <img src={img4} alt="Photo"/>
+  <>
+    <h2 className="heading">{`My Name is ${name}`}</h2>
 
-  <a href={links} target="_blanks">
-  <img src={img4} alt="Photo"/>
-  </a>
 
-</>,
+    <div className="img_div">
+      <img src={img1} alt="Photo" />
+      <img src={img2} alt="Photo" />
+      <img src={img3} alt="Photo" />
+      <img src={img4} alt="Photo" />
+
+      <a href={links} target="_blanks">
+        <img src={img4} alt="Photo" />
+      </a>
+
+
+    </div>
+
+  </>,
   document.getElementById('root')
 )
