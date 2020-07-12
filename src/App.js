@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Heading from './Heading';
+import Paragraph from './Paragraph';
+import List from './List';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        <h3>This is React Person</h3>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Heading />
+      <Paragraph />
+      <List />
+      <Paragraph/>
+    </>
   );
+
 }
 
 export default App;
