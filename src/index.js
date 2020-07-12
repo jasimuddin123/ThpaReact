@@ -10,9 +10,25 @@ const img3 = "https://picsum.photos/300/300";
 const img4 = "https://picsum.photos/350/300";
 const links = 'https://www.facebook.com/';
 
+
+
+const heading ={
+
+    fontWeight:'bold',
+    textAlign:'center',
+    color: '#fa9191',
+    fontSize:'50px',
+    textTransform:'capitalize',
+    boxShadow:'0px 2px 4px #ffe9c5',
+    margin:'50px 0px',
+    fontFamily:"'Roboto',sans-serif",
+
+
+}
+
 ReactDOM.render(
   <>
-    <h2 className="heading">{`My Name is ${name}`}</h2>
+    <h2 style={heading}>{`My Name is ${name}`}</h2>
 
 
     <div className="img_div">
