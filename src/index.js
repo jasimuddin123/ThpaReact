@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import favoritePerson,{favProg,myName,myNames} from './App';
 
+ReactDOM.render(
+    <>
+        <ol>
+            <li>Jasim Uddin</li>
+            <li>{favoritePerson}</li>
+            <li>{favProg}</li>
+            <li>{myName()}</li>
+            <li>{myNames()}</li>
+        </ol>
 
+    </>,
 
-ReactDOM.render(<App/>, document.getElementById('root'))
+    document.getElementById("root")
+)
