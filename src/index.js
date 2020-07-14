@@ -1,8 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Cards from './Cards';
 
 
 
-ReactDOM.render(<App/>, document.getElementById("root")
+ReactDOM.render(
+<>
+<Cards
+
+    imgsrc="https://picsum.photos/id/1/200/300"
+    title="A Netflix Original Series"
+    sname="DARK"
+    link="https://picsum.photos/images"
+/>
+<Cards
+      imgsrc="https://picsum.photos/id/1/200/300"
+    title="A Netflix Original Series"
+    sname="Light"
+    link="https://picsum.photos/images"
+/>
+<Cards
+      imgsrc="https://picsum.photos/id/1/200/300"
+    title="A Netflix Original Series"
+    sname="Omor"
+    link="https://picsum.photos/images"
+/>
+</>,
+ document.getElementById('root')
+
 )
