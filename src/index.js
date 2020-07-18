@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Cards from './Cards';
-import Sdata from './Sdata';
+import App from './App';
 
 
 // function ncard(val){
@@ -16,24 +15,9 @@ import Sdata from './Sdata';
 // />
 //   )
 // }
-ReactDOM.render(
-<>
-<h2 className="heading_style">List of Five favorite Movie </h2>
+ReactDOM.render( <App/>,
 
-  {Sdata.map((val,index) =>{
-    return(
-    <Cards
 
-    imgsrc={val.imgsrc}
-    title={val.title}
-    sname={val.sname}
-    link={val.link}
-/>
-  )
-
-  })}
-
-</>,
  document.getElementById('root')
 
 )
