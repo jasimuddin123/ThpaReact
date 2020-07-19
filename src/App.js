@@ -1,28 +1,29 @@
 import React from 'react';
 import Cards from './Cards';
 import Sdata from './Sdata';
+import Netflix from './Netflix';
+import Amazon from './Amazon';
 
+const favSeries = 'netfilix';
 
+const FavS = () => {
+  if (favSeries === 'netfilix') {
+     return <Netflix></Netflix>
 
-const App = ()=> (
-<>
-<h2 className="heading_style">List of Five favorite Movie </h2>
+  } else {
 
-  {Sdata.map((val,index) =>{
-    return(
-    <Cards
-    key ={val.id}
-    imgsrc={val.imgsrc}
-    title={val.title}
-    sname={val.sname}
-    link={val.link}
-/>
-  )
+    return (<Amazon></Amazon> );
 
-  })}
+  }
 
-</>
+}
 
+const App = () => (
+  <>
+    <h2 className="heading_style">List of Five favorite Movie </h2>
+    <FavS />
+
+  </>
 
 )
 
