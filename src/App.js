@@ -44,8 +44,23 @@ const [time,setCtime] = useState(newTime);
     setCtime(newCtime);
 
   }
+
+  let justTime = new Date().toLocaleTimeString();
+  const [dTime, dSetTime] = useState(justTime);
+
+  const dynamicTime = ()=>{
+   justTime = new Date().toLocaleTimeString();
+    dSetTime(justTime);
+  };
+    setInterval(dynamicTime,1000);
+
   return(
   <>
+    <h1> Dynamic Time = {dTime}</h1>
+    
+
+
+
     <h2> {time} </h2>
     <button onClick={updateTime}> Get Time </button>
     <h2 className="heading_style">List of Five favorite Movie </h2>
