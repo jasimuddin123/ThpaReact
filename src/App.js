@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
-import Cards from './Cards';
-import Sdata from './Sdata';
+
+
 import Netflix from './Netflix';
 import Amazon from './Amazon';
+import './App.css';
 
 const favSeries = 'amazon';
 
@@ -32,8 +33,21 @@ const IncNum = ()=>{
   setCount(count+1);
   // console.log("clicked " + count++);
 };
+
+let newTime = new Date().toLocaleTimeString();
+
+const [time,setCtime] = useState(newTime);
+
+  const updateTime = ()=>{
+    let newCtime = new Date().toLocaleTimeString();
+
+    setCtime(newCtime);
+
+  }
   return(
   <>
+    <h2> {time} </h2>
+    <button onClick={updateTime}> Get Time </button>
     <h2 className="heading_style">List of Five favorite Movie </h2>
     {/* <FavS /> */}
     {(favSeries === 'netfilix') ? <Netflix/> : <Amazon/>}
