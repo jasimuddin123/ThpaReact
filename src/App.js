@@ -6,23 +6,41 @@ const App = () => {
 
   const [fullName, setFullName] = useState();
 
+  const [lastName, setLastName] = useState();
+
+  const [lastNameNew, setLastNameNew] = useState();
+
+
   const inputEvent = (event)=>{
-    
     setName(event.target.value);
   }
 
-  const onSubmit = ()=>{
+
+  const onSubmits = (event)=>{
+    event.preventDefault();
     setFullName(name);
+    setLastNameNew(lastName);
   }
+  const inputEventTwo = (event) =>{
+    setLastName(event.target.value);
+  };
+  
   return(
     <>
+     <div className="main-div">
+     <form onSubmit={onSubmits}>
      <div>
-          <h1>Hello {fullName} </h1>
-          <input type="text" placeholder="Enter your Name" onChange={inputEvent}
+          <h1>Hello {fullName} {lastNameNew} </h1>
+          <input type="text" placeholder="First Name" onChange={inputEvent}
             value={name}
           />
-          <button onClick={onSubmit}> Click Me </button>
-
+          <input type="text" placeholder="Last Name"
+            onChange={inputEventTwo}
+            value={lastName}
+          />
+          <button type="submit" onClick={onSubmits}> Click Me </button>
+      </div>
+      </form>
      </div>
 
     </>
